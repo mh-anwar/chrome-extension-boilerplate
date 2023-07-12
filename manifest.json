@@ -1,39 +1,47 @@
 {
-  "action": {
-    "default_popup": "popup/popup.html",
-    "default_title": "Click Me!",
-    "default_icon": { "16": "images/icon_16.png", "32": "images/icon_32.png" }
-  },
-  "author": "mh-anwar",
-  "background": {
-    "service_worker": "background.js"
-  },
-  "content_scripts": [
-    {
-      "matches": ["<all_urls>"],
-      "js": ["content.js"],
-      "css": ["contentStyling.css"]
-    }
-  ],
-  "description": "Basic Boilerplate for MV3 Extensions",
-  "icons": {
-    "16": "images/icon_16.png",
-    "32": "images/icon_32.png",
-    "48": "images/icon_48.png",
-    "128": "images/icon_128.png"
-  },
-  "incognito": "split",
-  "manifest_version": 3,
-  "name": "MV3 Extension Boilerplate",
-  "offline_enabled": true,
-  "options_page": "options/options.html",
-  "permissions": ["storage"],
-  "short_name": "MV3 Extension",
-  "version": "1.0.0",
-  "web_accessible_resources": [
-    {
-      "resources": ["randomData.json", "t"],
-      "matches": ["<all_urls>"]
-    }
-  ]
+	"action": {
+		"default_popup": "popup/popup.html",
+		"default_title": "Click Me!",
+		"default_icon": {
+			"16": "images/icon_16.png",
+			"32": "images/icon_32.png"
+		}
+	},
+	"author": "mh-anwar",
+	"background": {
+		"scripts": ["background.js"]
+	},
+	"browser_specific_settings": {
+		"gecko": {
+			"id": "me@extension.app"
+		}
+	},
+	"content_scripts": [
+		{
+			"matches": ["<all_urls>"],
+			"js": ["content.js"],
+			"css": ["contentStyling.css"]
+		}
+	],
+	"description": "Basic Boilerplate for MV3 Extensions",
+	"icons": {
+		"16": "images/icon_16.png",
+		"32": "images/icon_32.png",
+		"48": "images/icon_48.png",
+		"128": "images/icon_128.png"
+	},
+	"incognito": "split",
+	"manifest_version": 3,
+	"name": "Firefox Extension Boilerplate",
+	"offline_enabled": true,
+	"options_page": "options/options.html",
+	"permissions": ["storage"],
+	"short_name": "MV3 Extension",
+	"version": "1.0.0",
+	"web_accessible_resources": [
+		{
+			"resources": ["randomData.json", "t"],
+			"matches": ["<all_urls>"]
+		}
+	]
 }
