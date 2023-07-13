@@ -1,2 +1,2 @@
-# mv3-extension-boilerplate
-Basic boilerplate for MV3 Extensions
+# Web Extension BOilerplate for Manifest V3
+This is a fork of [mv3-extension-boilerplate](https://github.com/mh-anwar/mv3-extension-boilerplate) with changes that incorporate `web-ext` and `webpack` to make development easier. It also allows for development on Firefox and Chromium.
