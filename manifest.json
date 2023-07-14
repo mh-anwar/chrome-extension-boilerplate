@@ -7,40 +7,42 @@
 			"32": "images/icon_32.png"
 		}
 	},
-	"author": "mh-anwar",
+	"author": "my-name",
 	"background": {
-		"scripts": ["background.js"]
+		"scripts": ["background/background.js"]
 	},
 	"browser_specific_settings": {
 		"gecko": {
-			"id": "me@extension.app"
+			"id": "addon@example.com"
 		}
 	},
 	"content_scripts": [
 		{
 			"matches": ["<all_urls>"],
-			"js": ["content.js"],
-			"css": ["contentStyling.css"]
+			"js": ["content/content.js"],
+			"css": ["content/contentStyling.css"]
 		}
 	],
-	"description": "Basic Boilerplate for MV3 Extensions",
+	"description": "Basic Boilerplate for Web Extensions",
 	"icons": {
 		"16": "images/icon_16.png",
 		"32": "images/icon_32.png",
 		"48": "images/icon_48.png",
 		"128": "images/icon_128.png"
 	},
-	"incognito": "split",
 	"manifest_version": 3,
-	"name": "Firefox Extension Boilerplate",
+	"name": "Web Extension Boilerplate",
 	"offline_enabled": true,
-	"options_page": "options/options.html",
+	"options_ui": {
+		"page": "options/options.html",
+		"open_in_tab": true
+	},
 	"permissions": ["storage"],
-	"short_name": "MV3 Extension",
+	"short_name": "Web Extension",
 	"version": "1.0.0",
 	"web_accessible_resources": [
 		{
-			"resources": ["randomData.json", "t"],
+			"resources": ["randomData.json"],
 			"matches": ["<all_urls>"]
 		}
 	]

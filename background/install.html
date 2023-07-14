@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Web Extension Boilerplate</title>
+		<link rel="stylesheet" href="installStyling.css" />
+		<link
+			rel="icon"
+			type="image/png"
+			href="../images/icon_16.png"
+			sizes="16x16"
+		/>
+	</head>
+
+	<body>
+		<h1>
+			Thank you for using the
+			<a href="https://github.com/mh-anwar/web-extension-boilerplate"
+				>Web Extension Boilerplate</a
+			>
+		</h1>
+		<p>
+			This boilerplate is meant for building Firefox and Chromium
+			extensions. File bugs/issues with this boilerplate
+			<a
+				href="https://github.com/mh-anwar/web-extension-boilerplate/issues"
+				>here</a
+			>
+		</p>
+		<table>
+			<tr>
+				<th>Category</th>
+				<th>Firefox</th>
+				<th>Chromium</th>
+			</tr>
+			<tr>
+				<td>Documentation</td>
+				<td>
+					<a
+						href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions"
+						target="_blank"
+						>Web Extensions</a
+					>
+				</td>
+				<td>
+					<a
+						href="https://developer.chrome.com/docs/extensions/mv3/"
+						target="_blank"
+						>Browser Extensions</a
+					>
+				</td>
+			</tr>
+			<tr>
+				<td>Content Scripts</td>
+				<td>
+					<a
+						href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_scripts"
+						target="_blank"
+						>Content Scripts</a
+					>
+				</td>
+				<td>
+					<a
+						href="https://developer.chrome.com/docs/extensions/mv3/content_scripts/"
+						target="_blank"
+						>Content Scripts</a
+					>
+				</td>
+			</tr>
+			<tr>
+				<td>Service Workers</td>
+				<td>
+					<a
+						href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Background_scripts"
+						target="_blank"
+						>Unsupported (Background Scripts)</a
+					>
+				</td>
+				<td>
+					<a
+						href="https://developer.chrome.com/docs/extensions/mv3/service_workers/"
+						target="_blank"
+						>Service Worker</a
+					>
+				</td>
+			</tr>
+			<tr>
+				<td>User Interfaces</td>
+				<td>
+					<a
+						href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface"
+						target="_blank"
+						>Firefox Specific UI</a
+					>
+				</td>
+				<td>
+					<a
+						href="https://developer.chrome.com/docs/extensions/mv3/user_interface/"
+						target="_blank"
+						>Chrome Specific UI</a
+					>
+				</td>
+			</tr>
+			<tr>
+				<td>Debugging</td>
+				<td>
+					<a href="about:debugging" target="_blank"
+						>about:debugging</a
+					>
+				</td>
+				<td>
+					<a href="chrome://extensions" target="_blank"
+						>chrome://extensions</a
+					>
+				</td>
+			</tr>
+			<tr>
+				<td>Testing</td>
+				<td colspan="2">
+					<ul>
+						<li>
+							<code>npm run test</code> runs
+							<code>web-ext run</code>
+							with added flags to ensure that the browser launches
+						</li>
+						<li>
+							<code>npm run build</code> runs
+							<code>web-ext build</code>
+						</li>
+						<li>
+							<code>npm run lint</code> runs
+							<code>web-ext lint</code>
+						</li>
+						<li>
+							<code>npm run test-no-tmp</code>
+							runs <code>web-ext run</code> without added flags
+						</li>
+					</ul>
+				</td>
+			</tr>
+		</table>
+	</body>
+</html>
