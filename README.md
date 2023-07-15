@@ -5,3 +5,4 @@ This is a fork of [mv3-extension-boilerplate](https://github.com/mh-anwar/mv3-ex
 - [`offline_enabled`](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/offline_enabled), a key valid in Chromium, extensions does not work in Firefox
 - Service Workers are supported in Chromium but not Firefox
   - The default Manifest works best in Firefox (uses Firefox's supported background scripts key)
+- The favicon images were generated using [favicon.io](https://favicon.io/)

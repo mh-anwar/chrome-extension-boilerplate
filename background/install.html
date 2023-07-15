@@ -5,6 +5,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Web Extension Boilerplate</title>
 		<link rel="stylesheet" href="installStyling.css" />
+		<script src="install.js" defer></script>
 		<link
 			rel="icon"
 			type="image/png"
@@ -140,5 +141,11 @@
 				</td>
 			</tr>
 		</table>
+		<button id="provide_perms">Grant Host Permissions</button>
+		<p>
+			By default, in Firefox, host permissions must be granted for a
+			content script to execute on all urls. Otherwise, it will only
+			execute when the popup is opened.
+		</p>
 	</body>
 </html>
