@@ -3,8 +3,9 @@
 	"version": "1.0.0",
 	"description": "Browser extension template built with Manifest Version 3.",
 	"scripts": {
-		"test": "TMPDIR=~/tmp-dir/ web-ext run --config=config.js --verbose",
-		"test-no-tmp": "web-ext run",
+		"dev": "TMPDIR=~/tmp-dir/ web-ext run --config=config.js",
+		"dev:chromium": "web-ext run --config=config.js -t chromium",
+		"dev-no-tmp": "web-ext run",
 		"build": "web-ext build",
 		"lint": "web-ext lint"
 	},
