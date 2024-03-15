@@ -1,10 +1,16 @@
 # Web Extension Boilerplate (Manifest V3)
-This is a fork of [mv3-extension-boilerplate](https://github.com/mh-anwar/mv3-extension-boilerplate) with changes that incorporate `web-ext` to make development easier and faster. It also allows for development on Firefox and Chromium.
+This is a fork of [chrome-extension-boilerplate](https://github.com/mh-anwar/mv3-extension-boilerplate) with changes that incorporate [web-ext](https://www.npmjs.com/package/web-ext) to make development easier and faster.
+
+## Key Features
+- Uses Manifest Version 3
+- Faster and easier development with `web-ext` 
+- Performant builds with `web-ext` without unwanted files
+- Development with both Firefox and Chromium in temporary profiles
 
 ## Notes:
 - [`offline_enabled`](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/offline_enabled), a key valid in Chromium, extensions does not work in Firefox
 - Service Workers are supported in Chromium but not Firefox
-  - The default Manifest works best in Firefox (uses Firefox's supported background scripts key)
+  - The default Manifest may be slightly incorrect because it uses both `script` and `service_worker` tags to support Firefox and Chromium development
 - The favicon images were generated using [favicon.io](https://favicon.io/)
 
 ## Getting Started
@@ -23,3 +29,6 @@ This is a fork of [mv3-extension-boilerplate](https://github.com/mh-anwar/mv3-ex
 
 ### `npm run lint`
 - Runs `web-ext lint` to check for errors in the manifest and lint extension
+
+### `npm run docs`
+- Runs `web-ext docs` to generate documentation for the extension
