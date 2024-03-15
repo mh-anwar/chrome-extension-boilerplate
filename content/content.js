@@ -2,13 +2,13 @@ console.log('Content script is running!');
 
 // Storage demo
 const getHelloWorld = async () => {
-	const helloWorld = await browser.storage.sync.get('hello');
+	const helloWorld = await chrome.storage.sync.get('hello');
 	console.log('Hello ' + helloWorld.hello + '. Storage Works');
 };
 
 // Message passing demo
 const passMessage = async () => {
-	const result = await browser.runtime.sendMessage({
+	const result = await chrome.runtime.sendMessage({
 		type: 'test',
 		query: 'Is the service worker running?',
 	});

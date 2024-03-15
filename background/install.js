@@ -1,5 +1,5 @@
 function requestPerms() {
-	browser.permissions.request(
+	chrome.permissions.request(
 		{
 			origins: ['<all_urls>'],
 		},
@@ -13,7 +13,7 @@ function requestPerms() {
 	);
 }
 
-browser.permissions.contains(
+chrome.permissions.contains(
 	{
 		origins: ['<all_urls>'],
 	},

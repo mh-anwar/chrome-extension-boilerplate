@@ -1,22 +1,22 @@
-browser.runtime.onInstalled.addListener((details) => {
+chrome.runtime.onInstalled.addListener((details) => {
 	const reason = details.reason;
 	switch (reason) {
 		case 'install':
-			browser.tabs.create({
-				url: 'background/install.html',
+			chrome.tabs.create({
+				url: './background/install.html',
 			});
 			break;
 		case 'update':
 			//detect extension update
 			break;
-		case 'browser_update':
-			//detect browser update
+		case 'chrome_update':
+			//detect chrome update
 			break;
 	}
-	browser.storage.sync.set({ hello: 'world' });
+	chrome.storage.sync.set({ hello: 'world' });
 });
 
-browser.runtime.onMessage.addListener((request, sender, sendResponse) => {
+chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
 	if (request.type === 'test') {
 		console.log('Received message from content script');
 		sendResponse('Service worker running.');
