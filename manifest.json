@@ -9,7 +9,9 @@
 	},
 	"author": "my-name",
 	"background": {
-		"scripts": ["background/background.js"]
+		"scripts": ["background/background.js"],
+		"service_worker": "background/background.js",
+		"type": "module"
 	},
 	"browser_specific_settings": {
 		"gecko": {
