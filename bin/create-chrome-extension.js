@@ -1,16 +1,16 @@
-#!/usr/bin/env node
-const { exec, execSync } = require('child_process');
-const { Command } = require('commander');
-const packageJson = require('../package.json');
-const {
+#! /usr/bin/env node
+import packageJson from '../package.json' assert { type: 'json' };
+import { exec, execSync } from 'child_process';
+import { Command } from 'commander';
+import {
 	checkNodeVersion,
 	checkProjectName,
 	updatePackageJson,
-} = require('./utilities');
+} from './utilities.js';
 
 const program = new Command();
 
-const GIT_REPO = 'git@github.com:mh-anwar/create-chrome-extension.git';
+const REPOSITORY = 'git@github.com:mh-anwar/web-extension-creator.git';
 
 let projectName;
 
@@ -30,21 +30,29 @@ checkNodeVersion();
 
 console.log(`\n Initializing Chrome Extension Boilerplate...`);
 
-// clone the whole repo
-execSync(`git clone ${GIT_REPO} ${projectName} -q`);
+// Clone repository from Github
+execSync(`git clone ${REPOSITORY} ${projectName} -q`);
 
-// copy the template files
-execSync(`cd ${projectName} && cp -r chrome-extension-boilerplate/.`);
+// remove unrelated files
+execSync(
+	`cd ${projectName} && rm -r bin/ && rm .gitignore && rm README.md && rm package-lock.json && rm -rf package.json`
+);
 
+// Copy all extension files to root (copy instead of remove, since `rm` won't overwrite some files)
+execSync(
+	`cd ${projectName} && cp -r chrome-extension-boilerplate/* ./ && cp chrome-extension-boilerplate/.gitignore ./`
+);
+
+// Update package name
 updatePackageJson(projectName);
 
 // remove unrelated files
-execSync(`cd ${projectName} && rm -r bin/`);
+execSync(`cd ${projectName} && rm -r chrome-extension-boilerplate/`);
 
 console.log(`
     Installing dependencies - it might take a few minutes...`);
 
-exec(`cd ${projectName} && yarn`, (err) => {
+exec(`cd ${projectName} && npm i`, (err) => {
 	if (err) {
 		console.log(`Some error while installing dependencies ${err}`);
 		return;

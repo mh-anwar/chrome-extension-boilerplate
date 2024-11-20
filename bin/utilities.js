@@ -1,9 +1,9 @@
-const fs = require('fs');
-const editJsonFile = require('edit-json-file');
+import fs from 'fs';
+import editJsonFile from 'edit-json-file';
 
 const NODE_VERSION = process.versions.node;
 
-function checkNodeVersion() {
+export function checkNodeVersion() {
 	if (parseInt(NODE_VERSION) < 14) {
 		console.log(`
     You have Node ${NODE_VERSION} installed.
@@ -14,11 +14,11 @@ function checkNodeVersion() {
 	}
 }
 
-function checkProjectName(name) {
+export function checkProjectName(name) {
 	if (typeof name === 'undefined') {
 		console.log(`
     Please specify the app name.
-    'npx @mh-anwar/create-chrome-extension <app-name>'
+    'npx web-extension-creator <app-name>'
     `);
 
 		process.exit(1);
@@ -33,15 +33,9 @@ function checkProjectName(name) {
 	}
 }
 
-function updatePackageJson(name) {
+export function updatePackageJson(name) {
 	const packageJson = editJsonFile(`./${name}/package.json`);
 
 	packageJson.set('name', name);
 	packageJson.save();
 }
-
-module.exports = {
-	checkNodeVersion,
-	checkProjectName,
-	updatePackageJson,
-};
