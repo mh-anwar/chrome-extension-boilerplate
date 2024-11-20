@@ -1,13 +1,33 @@
-# Chrome Extension Boilerplate (Manifest V3)
-This is a fork of [the archived chrome-extension-boilerplate](https://github.com/mh-anwar/mv3-extension-boilerplate) with changes that incorporate [web-ext](https://www.npmjs.com/package/web-ext) to make development easier and faster.
+# 📦️ Chrome Extension Boilerplate (Manifest V3)
 
-## Key Features
+<p align="center">
+<a href="https://npmjs.com/package/chrome-extension-maker"><img alt="Chrome Extension Maker NPM Version" src="https://img.shields.io/npm/v/chrome-extension-maker">
+<img alt="Node Current" src="https://img.shields.io/node/v/chrome-extension-maker">
+
+</a>
+</p>
+
+## ⚡️ Quick Start in 3 Steps
+
+```
+npx chrome-extension-maker <app-directory>
+```
+
+```
+cd <app-directory>
+```
+
+```
+npm run dev
+```
+
+## 🚨 Key Features
 - Uses Manifest Version 3
 - Faster and easier development with `web-ext`
 - Performant builds with `web-ext` without unwanted files
 - Development with both Firefox and Chromium in temporary profiles
 
-## Notes:
+## 📝 Notes:
 - [`offline_enabled`](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/offline_enabled), a key valid in Chromium, extensions does not work in Firefox
 - Service Workers are supported in Chromium but not Firefox
   - The default Manifest may be slightly incorrect because it uses both `script` and `service_worker` tags to support Firefox and Chromium development
@@ -16,7 +36,7 @@ This is a fork of [the archived chrome-extension-boilerplate](https://github.com
 - In order to load a custom Chrome profile, to maintain flags, for example, set the `chromiumProfile` variable in `web-ext-config.mjs` to the path of your Chrome profile directory which can be found at `chrome://version/` in the `Profile Path` field or in these [Chromium Docs](https://chromium.googlesource.com/chromium/src/+/HEAD/docs/user_data_dir.md)
 - There are two different configuration files with `web-ext-config.mjs` being automatically loaded for Chromium when you run `npm run dev` and `firefox-config.js` being automatically loaded for Firefox when you run `npm run dev:firefox`
 
-## Getting Started
+## 📄 Command Reference
 
 ### `npm run dev`
 - Runs `web-ext run` and tests in Chromium
@@ -35,3 +55,10 @@ This is a fork of [the archived chrome-extension-boilerplate](https://github.com
 
 ### `npm run docs`
 - Runs `web-ext docs` to open relevant documentation for `web-ext`
+
+## 👔 License
+This project is licensed under the MIT License.
+
+## 📚️ Credits
+
+This is a fork of [the archived chrome-extension-boilerplate](https://github.com/mh-anwar/mv3-extension-boilerplate) with changes that incorporate [web-ext](https://www.npmjs.com/package/web-ext) to make development easier and faster.
