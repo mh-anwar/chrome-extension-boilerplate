@@ -1,5 +1,5 @@
 {
-	"name": "create-chrome-extension-boilerplate",
+	"name": "web-extension-creator-boilerplate",
 	"version": "1.1.0",
 	"description": "Browser extension template built with Manifest Version 3 and web-ext to automate testing.",
 	"scripts": {
@@ -12,7 +12,7 @@
 		"help": "web-ext --help"
 	},
 	"author": "Mohammad Anwar",
-	"repository": "https://github.com/mh-anwar/create-chrome-extension.git",
+	"repository": "https://github.com/mh-anwar/web-extension-creator.git",
 	"license": "MIT",
 	"devDependencies": {
 		"web-ext": "^7.11.0"
