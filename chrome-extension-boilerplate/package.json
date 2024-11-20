@@ -15,6 +15,6 @@
 	"repository": "https://github.com/mh-anwar/create-chrome-extension.git",
 	"license": "MIT",
 	"devDependencies": {
-		"web-ext": "^7.11.0"
+		"web-ext": "^8.3.0"
 	}
 }
