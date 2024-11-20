@@ -3,7 +3,7 @@ chrome.runtime.onInstalled.addListener((details) => {
 	switch (reason) {
 		case 'install':
 			chrome.tabs.create({
-				url: './background/install.html',
+				url: '/background/install.html',
 			});
 			break;
 		case 'update':
