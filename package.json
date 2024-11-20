@@ -1,13 +1,12 @@
 {
-	"name": "create-chrome-extension",
-	"version": "1.1.0",
+	"name": "web-extension-creator",
+	"version": "1.1.1",
 	"description": "Command line utility to quickly create and develop Chrome/Firefox/Web extensions.",
-	"main": "bin/create-chrome-extension.js",
 	"author": "Mohammad Anwar",
 	"bin": {
-		"create-chrome-extension": "./bin/create-chrome-extension.js"
+		"web-extension-creator": "./bin/web-extension-creator.js"
 	},
-	"repository": "https://github.com/mh-anwar/create-chrome-extension.git",
+	"repository": "https://github.com/mh-anwar/web-extension-creator.git",
 	"license": "MIT",
 	"devDependencies": {
 		"web-ext": "^7.11.0"
@@ -15,5 +14,6 @@
 	"dependencies": {
 		"commander": "^12.1.0",
 		"edit-json-file": "^1.8.0"
-	}
+	},
+	"type": "module"
 }
