@@ -10,7 +10,7 @@ import {
 
 const program = new Command();
 
-const REPOSITORY = 'git@github.com:mh-anwar/web-extension-creator.git';
+const REPOSITORY = 'https://github.com/mh-anwar/web-extension-creator.git';
 
 let projectName;
 
@@ -28,12 +28,12 @@ checkProjectName(projectName);
 
 checkNodeVersion();
 
-console.log(`\n Initializing Chrome Extension Boilerplate...`);
+console.log(`\n📈 Initializing Chrome Extension Boilerplate...`);
 
 // Clone repository from Github
 execSync(`git clone ${REPOSITORY} ${projectName} -q`);
 
-// remove unrelated files
+// Remove unrelated files
 execSync(
 	`cd ${projectName} && rm -r bin/ && rm .gitignore && rm README.md && rm package-lock.json && rm -rf package.json`
 );
@@ -46,26 +46,25 @@ execSync(
 // Update package name
 updatePackageJson(projectName);
 
-// remove unrelated files
+// Remove unimportant files
 execSync(`cd ${projectName} && rm -r chrome-extension-boilerplate/`);
 
-console.log(`
-    Installing dependencies - it might take a few minutes...`);
+console.log(`\n📈 Installing dependencies - it might take a few minutes...`);
 
-exec(`cd ${projectName} && npm i`, (err) => {
+exec(`cd ${projectName} && npm i -s`, (err) => {
 	if (err) {
-		console.log(`Some error while installing dependencies ${err}`);
+		console.log(`\nSome error while installing dependencies ${err}`);
 		return;
 	}
 
 	console.log(`
-    All done!
+    ✅ All done!
 
-    Your app is now ready.
-    Use the commands below to run the app.
+    ℹ️ Your app is now ready.
+    ℹ️ Use the commands below to run the app.
 
-    cd ${projectName}
-    npm run dev
+    🚀 cd ${projectName}
+    🚀 npm run dev
 
     `);
 });

@@ -4,11 +4,11 @@ import editJsonFile from 'edit-json-file';
 const NODE_VERSION = process.versions.node;
 
 export function checkNodeVersion() {
-	if (parseInt(NODE_VERSION) < 14) {
+	if (parseInt(NODE_VERSION) < 19) {
 		console.log(`
-    You have Node ${NODE_VERSION} installed.
-    This project requires Node 18.0 or higher.
-    Please update your version of Node.
+    ❌ You have Node ${NODE_VERSION} installed.
+    ❌ This project requires Node 18.0 or higher.
+    >> Please update your version of Node.
     `);
 		process.exit();
 	}
@@ -17,8 +17,8 @@ export function checkNodeVersion() {
 export function checkProjectName(name) {
 	if (typeof name === 'undefined') {
 		console.log(`
-    Please specify the app name.
-    'npx web-extension-creator <app-name>'
+    ❌ Please specify the app name.
+    >> 'npx chrome-extension-maker <app-name>'
     `);
 
 		process.exit(1);
@@ -26,7 +26,8 @@ export function checkProjectName(name) {
 
 	if (fs.existsSync(`./${name}`)) {
 		console.log(`
-    The directory ${name} exists. Try using a new name.
+    ❌ The directory ${name} exists.
+	>> Try using a new name.
     `);
 
 		process.exit(1);
