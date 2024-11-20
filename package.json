@@ -1,12 +1,29 @@
 {
-	"name": "web-extension-creator",
-	"version": "1.1.1",
+	"name": "chrome-extension-maker",
+	"version": "1.1.5",
 	"description": "Command line utility to quickly create and develop Chrome/Firefox/Web extensions.",
+	"main": "./bin/chrome-extension-maker.js",
 	"author": "Mohammad Anwar",
 	"bin": {
-		"web-extension-creator": "./bin/web-extension-creator.js"
+		"chrome-extension-maker": "bin/chrome-extension-maker.js"
 	},
-	"repository": "https://github.com/mh-anwar/web-extension-creator.git",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"publishConfig": {
+		"access": "public"
+	},
+	"keywords": [
+		"chrome",
+		"extension",
+		"firefox",
+		"web",
+		"extension creator"
+	],
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/mh-anwar/chrome-extension-maker.git"
+	},
 	"license": "MIT",
 	"devDependencies": {
 		"web-ext": "^7.11.0"
