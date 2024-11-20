@@ -1,0 +1,20 @@
+{
+	"name": "create-chrome-extension-boilerplate",
+	"version": "1.1.0",
+	"description": "Browser extension template built with Manifest Version 3 and web-ext to automate testing.",
+	"scripts": {
+		"dev": "web-ext run -t chromium",
+		"dev:firefox": "TMPDIR=~/tmp-dir/ web-ext run --config=firefox-config.js",
+		"build": "web-ext lint && web-ext build",
+		"build:firefox": "web-ext build --config=firefox-config.js",
+		"lint": "web-ext lint",
+		"docs": "web-ext docs",
+		"help": "web-ext --help"
+	},
+	"author": "Mohammad Anwar",
+	"repository": "https://github.com/mh-anwar/create-chrome-extension.git",
+	"license": "MIT",
+	"devDependencies": {
+		"web-ext": "^7.11.0"
+	}
+}

@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Web Extension Boilerplate</title>
+	<link rel="stylesheet" href="installStyling.css" />
+	<script src="install.js" defer></script>
+	<link rel="icon" type="image/png" href="../images/icon_16.png" sizes="16x16" />
+</head>
+
+<body>
+	<header>
+		<h1>
+			Thank you for using the
+			<a href="https://github.com/mh-anwar/create-chrome-extension" target="_blank">
+				Chrome Extension Boilerplate
+			</a>
+		</h1>
+	</header>
+
+	<main class="content">
+		<div class="note">
+			This boilerplate is designed to help you build extensions for both Firefox and Chromium.
+			If you encounter any bugs or issues, feel free to
+			<a href="https://github.com/mh-anwar/create-chrome-extension/issues" target="_blank">
+				report them here
+			</a>.
+		</div>
+
+		<table>
+			<thead>
+				<tr>
+					<th>Category</th>
+					<th>Firefox</th>
+					<th>Chromium</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>Documentation</td>
+					<td>
+						<a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions"
+							target="_blank">
+							Web Extensions
+						</a>
+					</td>
+					<td>
+						<a href="https://developer.chrome.com/docs/extensions/mv3/" target="_blank">
+							Browser Extensions
+						</a>
+					</td>
+				</tr>
+				<tr>
+					<td>Content Scripts</td>
+					<td>
+						<a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_scripts"
+							target="_blank">
+							Content Scripts
+						</a>
+					</td>
+					<td>
+						<a href="https://developer.chrome.com/docs/extensions/mv3/content_scripts/" target="_blank">
+							Content Scripts
+						</a>
+					</td>
+				</tr>
+				<tr>
+					<td>Service Workers</td>
+					<td>
+						<a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Background_scripts"
+							target="_blank">
+							Unsupported (Background Scripts)
+						</a>
+					</td>
+					<td>
+						<a href="https://developer.chrome.com/docs/extensions/mv3/service_workers/" target="_blank">
+							Service Worker
+						</a>
+					</td>
+				</tr>
+				<tr>
+					<td>User Interfaces</td>
+					<td>
+						<a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface"
+							target="_blank">
+							Firefox Specific UI
+						</a>
+					</td>
+					<td>
+						<a href="https://developer.chrome.com/docs/extensions/mv3/user_interface/" target="_blank">
+							Chrome Specific UI
+						</a>
+					</td>
+				</tr>
+				<tr>
+					<td>Debugging</td>
+					<td>
+						<a href="about:debugging" target="_blank">about:debugging</a>
+					</td>
+					<td>
+						<a href="chrome://extensions" target="_blank">chrome://extensions</a>
+					</td>
+				</tr>
+				<tr>
+					<td>Testing</td>
+					<td colspan="2">
+						<ul>
+							<li>
+								<code>npm run dev</code> runs <code>web-ext run -t chromium</code> to run the extension
+								for Chromium
+							</li>
+							<li>
+								<code>npm run build</code> runs <code>web-ext build</code> to build for Chromium
+							</li>
+							<li>
+								<code>npm run lint</code> runs <code>web-ext lint</code> to lint your repository
+							</li>
+							<br />
+							<strong>Firefox Specific:</strong>
+							<li>
+								<code>npm run dev:firefox</code> runs
+								<code>web-ext run --config=firefox-config.js</code> to run the extension for Firefox
+								with a config file specific to Firefox
+							</li>
+							<li>
+								<code>npm run build</code> runs <code>web-ext build --config=firefox-config.js</code> to
+								build for Firefox with its specific config file
+							</li>
+						</ul>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+
+		<h1>Note for Manifest Version 3</h1>
+
+		<button id="provide_perms">Grant Host Permissions</button>
+
+		<div class="note">
+			<p>
+				By default, in Firefox, host permissions must be granted for a content script to execute on all URLs.
+				Otherwise, it will only execute when the popup is opened. This is new for Manifest Version 3.
+			</p>
+		</div>
+	</main>
+</body>
+
+</html>
