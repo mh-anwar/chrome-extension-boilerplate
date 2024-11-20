@@ -1,19 +1,19 @@
 {
-	"name": "browser-extension-boilerplate",
+	"name": "create-chrome-extension",
 	"version": "1.1.0",
-	"description": "Browser extension template built with Manifest Version 3 and web-ext to automate testing.",
-	"scripts": {
-		"dev": "web-ext run -t chromium",
-		"dev:firefox": "TMPDIR=~/tmp-dir/ web-ext run --config=firefox-config.js",
-		"build": "web-ext lint && web-ext build",
-		"build:firefox": "web-ext build --config=firefox-config.js",
-		"lint": "web-ext lint",
-		"docs": "web-ext docs",
-		"help": "web-ext --help"
+	"description": "Command line utility to quickly create and develop Chrome/Firefox/Web extensions.",
+	"main": "bin/create-chrome-extension.js",
+	"author": "Mohammad Anwar",
+	"bin": {
+		"create-chrome-extension": "./bin/create-chrome-extension.js"
 	},
-	"author": "my-name",
+	"repository": "https://github.com/mh-anwar/create-chrome-extension.git",
 	"license": "MIT",
 	"devDependencies": {
 		"web-ext": "^7.11.0"
+	},
+	"dependencies": {
+		"commander": "^12.1.0",
+		"edit-json-file": "^1.8.0"
 	}
 }
