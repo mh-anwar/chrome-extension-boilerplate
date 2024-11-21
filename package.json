@@ -1,6 +1,6 @@
 {
 	"name": "chrome-extension-maker",
-	"version": "1.2.2",
+	"version": "1.2.3",
 	"description": "Command line utility to quickly create and develop Chrome/Firefox/Web extensions.",
 	"main": "./bin/chrome-extension-maker.js",
 	"author": "Mohammad Anwar",
